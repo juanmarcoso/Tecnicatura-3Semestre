@@ -10,6 +10,10 @@ except TypeError as e:
     print(f'TypeError - Ocurrio un error: {type(e)}')
 except Exception as e: # La clase padre puede manejar todo tipo error
     print(f'Exception - Ocurrio un error: {e}')
+else:
+    print("No se arrojo ninguna excepcion")
+finally: # Siempre se va a ejecutar
+    print("Ejecucion de este bloque finally")
 
 print(f'El resultado es: {resultado}')
 print('seguimos...')
