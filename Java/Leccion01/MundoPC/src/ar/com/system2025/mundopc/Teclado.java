@@ -17,5 +17,4 @@ public class Teclado extends DispositivoEntrada {
         return "Teclado{" + "idTeclado=" + idTeclado + ", " + super.toString() + '}';
     }
     
-    
 }
