@@ -64,11 +64,11 @@ public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton)
     @Override
     public String toString() {
         return "Computadora{" + 
-                "IdComputadora= " + idComputadora + 
-                "Nombre= " + nombre + 
-                "Monitor= " + monitor + 
-                "Teclado= " + teclado + 
-                "Raton= " + raton + '}';
+                ". IdComputadora= " + idComputadora + 
+                ". Nombre= " + nombre + 
+                ". Monitor= " + monitor + 
+                ". Teclado= " + teclado + 
+                ". Raton= " + raton + '}';
     }
     
     
