@@ -111,3 +111,34 @@ console.log(computadora1.toString());
 console.log(`${computadora1}`);
 let computadora2 = new Computadora('Aser', monitor2, raton2, teclado2);
 console.log(`${computadora2}`);
+
+
+class Orden{
+    static contadorOrdenes = 0;
+
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._computadoras = [];
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarComputadora(computadora){
+        this._computadoras.push(computadora); //Adding objects
+    }
+
+    mostrarOrden(){ //Llama a los toString()
+        let computadorasOrden = '';
+        for ( let computadora of this._computadoras){
+            computadorasOrden += `\n${computadora}`;
+        }
+        console.log(`Orden #${this._idOrden}:\nComputadoras: ${computadorasOrden}`);
+    }
+}
+
+let orden1 = new Orden();
+orden1.agregarComputadora(computadora1);
+orden1.agregarComputadora(computadora2);
+orden1.mostrarOrden();
