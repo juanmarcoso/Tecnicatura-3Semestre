@@ -1,34 +1,43 @@
 """
-Las letras para el manejo de archivos en python son: 
-'r': read
-'a': append
-'w': write
-'x': crea un archivo
-'t': para tipo de archivo text
-'b': para archivos binarios
-'w+': Para escribir y leer informacion
-'r+': Para leer y escribir infomrción
-
+Modos de apertura de archivos en Python:
+'r'  : Lectura (read) - Abre un archivo existente para leer (error si no existe)
+'a'  : Append (añadir) - Abre para escribir al final del archivo, lo crea si no existe
+'w'  : Escritura (write) - Abre para sobrescribir el archivo, lo crea si no existe
+'x'  : Creación exclusiva - Crea un nuevo archivo (error si ya existe)
+'t'  : Modo texto (text) - Valor por defecto, archivos de texto
+'b'  : Modo binario (binary) - Para archivos binarios (imágenes, ejecutables, etc.)
+'w+' : Escritura + Lectura - Sobrescribe el archivo, permite lectura después
+'r+' : Lectura + Escritura - Abre un archivo existente para lectura/escritura
 """
+
+# Abrimos el archivo en modo lectura con codificación UTF-8
 archivo = open('prueba.txt', 'r', encoding='UTF-8')
-#print(archivo.read())
-#print(archivo.read(16)) # Mostramos los 16 primeros lugares
-#print(archivo.read(10)) # Continuamos leyendo a continuacion
-#print(archivo.readline()) # Con esto leemos la primera linea
-#print(archivo.readline()) # Repitiendo el script podemos ver la segunda linea
 
-# Vamos a iterar el archivo, cada una de las lineas
-#for linea in archivo:
-    #print(linea): Vamos a ver el archivo iterado por lineas
-    #print(archivo.readlines()) # Ahora le pedimos que nos muestre todo el archivo como una lista
+# Diferentes formas de leer el contenido:
+# print(archivo.read())  # Lee todo el contenido del archivo
+# print(archivo.read(16))  # Lee solo los primeros 16 caracteres
+# print(archivo.read(10))  # Continúa leyendo los siguientes 10 caracteres
+# print(archivo.readline())  # Lee una línea completa (primera línea)
+# print(archivo.readline())  # Lee la siguiente línea (segunda línea)
 
-#print(archivo.readlines()[1]) # Se puede hacer por fuera del for tambien y buscar por indice
+# Iteración sobre el archivo línea por línea:
+# for linea in archivo:
+#     print(linea)  # Imprime cada línea del archivo
+#     print(archivo.readlines())  # Lee todas las líneas restantes como lista
 
-# Anexamos informacion, copiamos a otro. Si ejecutamos dos veces se copia dos veces
-# archivo2 = open('copia.txt', 'a', encoding='utf8') # para copiar tantas veces se ejecute el script
-archivo2 = open('copia.txt', 'w', encoding='utf8') #Si no queremos que vuelva a copiar, cambiamos a 'w'
+# Acceso directo a líneas específicas:
+# print(archivo.readlines()[1])  # Accede a la segunda línea usando índice
+
+# Proceso de copia del archivo:
+# Abrimos un nuevo archivo para escritura (modo 'w' sobrescribe, 'a' añadiría)
+archivo2 = open('copia.txt', 'w', encoding='utf8')  
+
+# Copiamos el contenido del archivo original al nuevo
 archivo2.write(archivo.read())
-archivo.close() # Cerramos el primer archivo
-archivo2.close() # Cerramos el segundo archivo
 
+# Es importante cerrar los archivos para liberar recursos
+archivo.close()  # Cerramos el archivo original
+archivo2.close()  # Cerramos el archivo copia
+
+# Mensaje de confirmación
 print('Se ha terminado el proceso de leer y copiar archivos')
