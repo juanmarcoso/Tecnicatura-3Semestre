@@ -1,9 +1,221 @@
-/Java/Leccion01/MundoPC/nbproject/private/
-/Java/Leccion01/MundoPC/build/
-/Java/NewFolder/ArgumentosVariables/nbproject/private/
-/Java/NewFolder/ArgumentosVariables/build/
-/Java/Leccion02/Enumeraciones/nbproject/private/
-/Java/Leccion02/ArgumentosVariables/build/
-/Java/Leccion02/ArgumentosVariables/nbproject/private/
-/Java/Leccion02/Enumeraciones/build/
-/Java/Leccion02/BloquesInicializacion/nbproject/private/
+# ==================== IDEs y Editores ====================
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+*.code-workspace
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+*.idea/
+.idea_modules/
+
+# Eclipse
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.classpath
+.project
+.loadpath
+.externalToolBuilders/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ==================== Sistemas Operativos ====================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ==================== Lenguajes y Frameworks ====================
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.eggs/
+*.egg
+*.manifest
+*.spec
+
+# Environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.env
+*.venv
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.ctxt
+.mtj.tmp/
+*.classpath
+*.factorypath
+*.project
+*.settings/
+*.springBeans
+*.lst
+target/
+bin/
+out/
+build/
+.gwt/
+.gwt-tmp/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+pnpm-debug.log*
+dist/
+build/
+.next/
+.cache/
+.serverless/
+.serverless_nextjs/
+
+# Ruby
+*.gem
+.bundle/
+.ruby-version
+.rvmrc
+
+# Go
+bin/
+pkg/
+
+# ==================== Bases de Datos ====================
+*.sqlite3
+*.sqlite
+*.db
+*.dump
+*.sqbpro
+
+# ==================== Testing y Coverage ====================
+coverage/
+htmlcov/
+*.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+test-reports/
+junit.xml
+
+# ==================== Archivos Temporales y Logs ====================
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+*.rej
+*.swo
+*~
+*.pid
+*.seed
+*.pid.lock
+*.sublime-workspace
+*.sublime-project
+
+# ==================== Paquetes y Distribuciones ====================
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.msi
+*.exe
+*.deb
+*.rpm
+
+# ==================== Documentación ====================
+docs/_build/
+_site/
+_sass/
+_sass-cache/
+.jekyll-cache/
+
+# ==================== Configuraciones Específicas ====================
+# Archivos de configuración local que no deben compartirse
+*.local
+*.local.*
+
+# Archivos de secrets
+secrets.yml
+credentials.json
+*.key
+*.cert
+*.pem
