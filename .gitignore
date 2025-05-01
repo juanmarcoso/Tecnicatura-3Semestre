@@ -220,3 +220,4 @@ credentials.json
 *.key
 *.cert
 *.pem
+/Java/Leccion03/ForEach/nbproject/private/
