@@ -1,30 +1,38 @@
 package paquete1;
 
 /**
- * Esta clase demuestra el uso del modificador de acceso 'public' en:
- * - Clases
- * - Atributos
- * - Métodos
- * - Constructores
- * 
- * El modificador 'public' permite el acceso desde cualquier otra clase,
- * incluso si está en otro paquete.
+ * Esta clase demuestra múltiples modificadores de acceso:
+ * - public: acceso desde cualquier paquete.
+ * - protected: acceso desde mismo paquete o subclases (herencia).
+ * Contiene ejemplos de atributos, métodos y constructores con estos modificadores.
  */
 public class Clase1 {
 
-    // Atributo público: accesible desde cualquier clase.
-    public String atributoPublic = "Valor atributo public";
+    public String atributoPublic = "Valor atributo public"; // Accesible desde cualquier clase
+    protected String atributoProtected = "Valor atributo 'Protected'"; // Accesible por herencia o mismo paquete
 
     /**
-     * Constructor público: permite crear instancias de esta clase
-     * desde cualquier otra clase (ejemplo: TestModificadoresAcceso).
+     * Constructor público: puede ser invocado desde cualquier paquete.
      */
     public Clase1() {
         System.out.println("Constructor public");
     }
 
-    // Método público: puede ser invocado desde cualquier clase.
+    /**
+     * Constructor protected: solo accesible desde:
+     * - El mismo paquete (paquete1)
+     * - Subclases (aunque estén en otro paquete, como Clase3).
+     * @param atributoPublic Parámetro de ejemplo (no usado en este caso).
+     */
+    protected Clase1(String atributoPublic) {
+        System.out.println("Constructor protected");
+    }
+
     public void metodoPublico() {
-        System.out.println("Metodo publico");
+        System.out.println("Metodo publico"); // Invocable desde cualquier clase
+    }
+
+    protected void metodoProtected() {
+        System.out.println("Metodo protected"); // Invocable por herencia o mismo paquete
     }
 }
