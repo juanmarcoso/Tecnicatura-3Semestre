@@ -4,16 +4,21 @@ public class Empleado {
     protected String nombre;
     protected double sueldo;
 
-    public Empleado(String nombre, double sueldo){
+    // Constructor
+    public Empleado(String nombre, double sueldo) {
         this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
-    //Metodo para la sobreescritura
-    public String obtenerDetalles(){
+    /**
+     * Método que puede ser sobrescrito por subclases.
+     * Retorna detalles básicos del empleado.
+     */
+    public String obtenerDetalles() {
         return "Nombre: " + this.nombre + ", sueldo: " + this.sueldo;
     }
 
+    // Getters y setters (comentarios breves)
     public String getNombre() {
         return nombre;
     }
@@ -29,5 +34,4 @@ public class Empleado {
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
-
 }

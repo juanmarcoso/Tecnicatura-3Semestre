@@ -1,16 +1,20 @@
 package domain;
 
-public class Gerente extends Empleado{
+public class Gerente extends Empleado {
     private String departamento;
 
-    public Gerente(String nombre, double sueldo, String departamento){
-        super(nombre, sueldo);
+    // Constructor que llama al constructor de la clase padre (Empleado)
+    public Gerente(String nombre, double sueldo, String departamento) {
+        super(nombre, sueldo); // Inicializa nombre y sueldo usando el constructor de Empleado
         this.departamento = departamento;
     }
 
-    //Sobreescribimos el metodo
+    /**
+     * Sobrescribe el método obtenerDetalles() de Empleado.
+     * Añade información del departamento al resultado.
+     */
     @Override
-    public String obtenerDetalles(){
+    public String obtenerDetalles() {
         return super.obtenerDetalles() + ", Departamento: " + this.departamento;
     }
 }
