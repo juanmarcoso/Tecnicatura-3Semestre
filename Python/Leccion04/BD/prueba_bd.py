@@ -9,13 +9,20 @@ conexion = psycopg2.connect(
     database = 'test_bd'
 )
 
+with conexion:
+    with conexion.cursor() as cursor:
+        sentencia = 'SELECT * FROM persona'
+        cursor.execute(sentencia) # De esta manera ejecutamos la query
+        registros = cursor.fetchall() # Recuperamos todos los registros que seran una lista
+        print(registros)
+        
 #print(conexion)
-cursor = conexion.cursor()
-sentencia = 'SELECT * FROM persona'
-cursor.execute(sentencia) # De esta manera ejecutamos la sentencia
-# Recuperamos todos los registros como tuplas dentro de una tupla
-registros = cursor.fetchall() #
-print(registros) #[(1, 'Juan', 'Perez', 'jperez@mail.com'), (2, 'Carla', 'Gomez', 'kgomez@gmail.com')]
+# cursor = conexion.cursor()
+# sentencia = 'SELECT * FROM persona'
+# cursor.execute(sentencia) # De esta manera ejecutamos la sentencia
+# # Recuperamos todos los registros como tuplas dentro de una tupla
+# registros = cursor.fetchall() #
+# print(registros) #[(1, 'Juan', 'Perez', 'jperez@mail.com'), (2, 'Carla', 'Gomez', 'kgomez@gmail.com')]
 
 cursor.close() # Cerramos la conexion con el objeto cursor
 conexion.close() # Cerramos la conexion con nuestra base de datos

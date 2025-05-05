@@ -40,6 +40,7 @@ pythonenv*
 .env.test
 .env.production
 .env.*.local
+Leccion04/BD/config.py
 
 # PostgreSQL
 *.pid
