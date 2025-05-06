@@ -1,12 +1,13 @@
 import psycopg2 #Para poder conectarnos a Postgres
+from config import DB_CONFIG
 
 #print(f"Version: {psycopg2.__libpq_version__}")
 conexion = psycopg2.connect(
-    user = 'postgres',
-    password = 'admin',
-    host = 'localhost',
-    port = '5432',
-    database = 'test_bd'
+    user = DB_CONFIG['user'],
+    password = DB_CONFIG["password"],
+    host = DB_CONFIG["host"],
+    port = DB_CONFIG["port"],
+    database = DB_CONFIG["database"]
 )
 
 with conexion:
