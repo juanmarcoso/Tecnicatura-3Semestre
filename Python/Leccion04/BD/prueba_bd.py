@@ -20,10 +20,14 @@ try:
         # Crea un cursor para ejecutar consultas SQL
         with conexion.cursor() as cursor:
             # Consulta SQL para seleccionar todos los registros de la tabla persona
-            sentencia = 'SELECT * FROM persona'
+            # Al usar %s, psycopg2 escapa automáticamente los valores para prevenir inyección SQL.
+            sentencia = 'SELECT * FROM persona WHERE id_persona = %s' #Placeholder
+            
+            # Creamos una variable
+            id_persona = 1
             
             # Ejecuta la consulta SQL
-            cursor.execute(sentencia)
+            cursor.execute(sentencia, (id_persona, ))
             
             # Obtiene todos los registros resultantes de la consulta
             registros = cursor.fetchall()
