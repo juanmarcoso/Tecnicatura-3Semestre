@@ -21,13 +21,14 @@ try:
         with conexion.cursor() as cursor:
             # Consulta SQL para seleccionar todos los registros de la tabla persona
             # Al usar %s, psycopg2 escapa automáticamente los valores para prevenir inyección SQL.
-            sentencia = 'SELECT * FROM persona WHERE id_persona IN (1, 2)' 
+            sentencia = 'SELECT * FROM persona WHERE id_persona IN %s' 
             
             # Creamos una variable
-            #id_persona = input("Digite el numero Id a buscar: ")
+            entrada = input("Digite los Id a buscar (separados por coma): ")
+            llaves_primarias = (tuple(entrada.split(', ')), )
             
             # Ejecuta la consulta SQL
-            cursor.execute(sentencia)
+            cursor.execute(sentencia, llaves_primarias)
             
             # Obtiene todos los registros resultantes de la consulta
             registros = cursor.fetchall()
