@@ -1,22 +1,45 @@
-import psycopg2 #Para poder conectarnos a Postgres
-from config import DB_CONFIG
+import psycopg2  # Librería para conectarse a PostgreSQL
+from config import DB_CONFIG  # Importa las credenciales desde un archivo de configuración externo
 
-#print(f"Version: {psycopg2.__libpq_version__}")
+'''
+Establece la conexión con la base de datos PostgreSQL usando:
+- Usuario, contraseña, host, puerto y nombre de la base de datos
+que vienen definidos en el diccionario DB_CONFIG
+'''
 conexion = psycopg2.connect(
-    user = DB_CONFIG['user'],
-    password = DB_CONFIG["password"],
-    host = DB_CONFIG["host"],
-    port = DB_CONFIG["port"],
-    database = DB_CONFIG["database"]
+    user=DB_CONFIG['user'],
+    password=DB_CONFIG["password"],
+    host=DB_CONFIG["host"],
+    port=DB_CONFIG["port"],
+    database=DB_CONFIG["database"]
 )
 
-with conexion:
-    with conexion.cursor() as cursor:
-        sentencia = 'SELECT * FROM persona'
-        cursor.execute(sentencia) # De esta manera ejecutamos la query
-        registros = cursor.fetchall() # Recuperamos todos los registros que seran una lista
-        print(registros)
-        
+try:
+    # Bloque de transacción automática (with cierra automáticamente al final)
+    with conexion:
+        # Crea un cursor para ejecutar consultas SQL
+        with conexion.cursor() as cursor:
+            # Consulta SQL para seleccionar todos los registros de la tabla persona
+            sentencia = 'SELECT * FROM persona'
+            
+            # Ejecuta la consulta SQL
+            cursor.execute(sentencia)
+            
+            # Obtiene todos los registros resultantes de la consulta
+            registros = cursor.fetchall()
+            
+            # Imprime los registros en la consola
+            print(registros)
+
+except Exception as e:
+    # Manejo de errores: captura cualquier excepción durante la ejecución
+    print(f'Ocurrió un error: {e}')
+
+finally:
+    # Este bloque se ejecuta siempre, asegurando que la conexión se cierre
+    conexion.close()
+    print("Conexión cerrada correctamente")
+
 #print(conexion)
 # cursor = conexion.cursor()
 # sentencia = 'SELECT * FROM persona'
@@ -25,5 +48,5 @@ with conexion:
 # registros = cursor.fetchall() #
 # print(registros) #[(1, 'Juan', 'Perez', 'jperez@mail.com'), (2, 'Carla', 'Gomez', 'kgomez@gmail.com')]
 
-cursor.close() # Cerramos la conexion con el objeto cursor
-conexion.close() # Cerramos la conexion con nuestra base de datos
+#cursor.close() # Cerramos la conexion con el objeto cursor
+ # Cerramos la conexion con nuestra base de datos
