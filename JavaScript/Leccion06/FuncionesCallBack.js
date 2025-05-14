@@ -48,3 +48,9 @@ setTimeout(function(){ console.log("Saludo asincrono 2 despues de 5 segundos")},
 
 setTimeout( () => console.log('Saludo asincrono 3 despues de 9 segundos'), 9000);
 
+let reloj = () => {
+    let fecha = new Date();
+    console.log(`${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`);
+}
+
+setInterval(reloj, 1000); //Cada un segundo se ejecuta
