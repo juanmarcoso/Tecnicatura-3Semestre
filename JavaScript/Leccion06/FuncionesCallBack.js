@@ -47,3 +47,4 @@ setTimeout(miFuncionCallback, 3000); //En milisegundos decimos que queremos que 
 setTimeout(function(){ console.log("Saludo asincrono 2 despues de 5 segundos")}, 5000);
 
 setTimeout( () => console.log('Saludo asincrono 3 despues de 9 segundos'), 9000);
+
