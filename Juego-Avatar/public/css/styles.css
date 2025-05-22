@@ -161,3 +161,39 @@ header h1 {
     margin-top: 20px;
     position: relative;
 }
+
+/* Estilo para el botón de reinicio */
+.btn-reinicio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    z-index: 100;
+    
+}
+
+.btn-reinicio:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(360deg);
+}
+
+.btn-reinicio:active {
+    transform: scale(0.95) rotate(360deg);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .btn-reinicio {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}

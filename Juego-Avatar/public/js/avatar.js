@@ -13,10 +13,12 @@ const textoMensaje = document.getElementById("texto-mensaje");
 const spanVidasJugador = document.getElementById("vidas-jugador");
 const spanVidasEnemigo = document.getElementById("vidas-enemigo");
 const seccionReiniciar = document.getElementById("reiniciar");
+const botonReiniciarInicio = document.getElementById("boton-reiniciar-inicio");
 
 // Event Listeners
 botonPersonaje.addEventListener("click", seleccionarPersonajeJugador);
 botonReiniciar.addEventListener("click", reiniciarJuego);
+botonReiniciarInicio.addEventListener("click", reiniciarJuego);
 
 // Función para seleccionar personaje
 function seleccionarPersonajeJugador() {
@@ -40,6 +42,10 @@ function seleccionarPersonajeJugador() {
     } else {
         alert("Por favor, selecciona un personaje.");
     }
+}
+
+function reiniciarJuego() {
+    location.reload();
 }
 
 // Función para volver al inicio
