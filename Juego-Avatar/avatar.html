@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVATAR: Elige tu Guerrero</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AVATAR: EL ULTIMO MAESTRO DEL AIRE</h1>
+            <p>🔥💧🌱🌪️ Elige tu destino</p>
+        </header>
+
+        <section id="seleccionar-personaje">
+            <h2>Elige tu Guerrero</h2>
+            <div class="personajes-grid">
+                <div class="personaje">
+                    <input type="radio" name="personaje" id="Zuko">
+                    <label for="Zuko">
+                        <img src="public/assets/zuko.png" alt="Zuko">
+                        <p>Zuko 🔥</p>
+                    </label>
+                </div>
+                <div class="personaje">
+                    <input type="radio" name="personaje" id="Katara">
+                    <label for="Katara">
+                        <img src="public/assets/katara.png" alt="Katara">
+                        <p>Katara 💧</p>
+                    </label>
+                </div>
+                <div class="personaje">
+                    <input type="radio" name="personaje" id="Aang">
+                    <label for="Aang">
+                        <img src="public/assets/aang.png" alt="Aang">
+                        <p>Aang 🌪️</p>
+                    </label>
+                </div>
+                <div class="personaje">
+                    <input type="radio" name="personaje" id="Toph">
+                    <label for="Toph">
+                        <img src="public/assets/toph.png" alt="Toph">
+                        <p>Toph 🌱</p>
+                    </label>
+                </div>
+            </div>
+            <div class="botones-navegacion">
+                <button id="boton-personaje" class="btn">¡Seleccionar!</button>
+            </div>
+        </section>
+
+        <section id="seleccionar-ataque" class="hidden">
+            <button id="boton-volver-ataque" class="btn-volver">← Volver</button>
+            <h2>Elige tu Ataque</h2>
+            <div class="vidas">
+                <div class="vida-jugador">
+                    <p>Tus vidas: <span id="vidas-jugador">3</span></p>
+                </div>
+                <div class="vida-enemigo">
+                    <p>Vidas enemigo: <span id="vidas-enemigo">3</span></p>
+                </div>
+            </div>
+            <div class="ataques">
+                <button id="boton-fuego" class="btn-ataque">Fuego 🔥</button>
+                <button id="boton-agua" class="btn-ataque">Agua 💧</button>
+                <button id="boton-tierra" class="btn-ataque">Tierra 🌱</button>
+                <button id="boton-aire" class="btn-ataque">Aire 🌪️</button>
+            </div>
+        </section>
+
+        <section id="mensajes" class="hidden">
+            <div class="resultado">
+                <p id="texto-mensaje">¡Preparate para la batalla!</p>
+            </div>
+        </section>
+
+        <section id="reiniciar" class="hidden">
+            <div class="botones-navegacion">
+                <button id="boton-volver-final" class="btn-volver">← Volver</button>
+                <button id="boton-reiniciar" class="btn">¡Nueva Batalla!</button>
+            </div>
+        </section>
+    </div>
+    <script src="public/js/avatar.js"></script>
+</body>
+</html>
