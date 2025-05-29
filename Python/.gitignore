@@ -41,6 +41,7 @@ pythonenv*
 .env.production
 .env.*.local
 Leccion04/BD/config.py
+Leccion08/config.py
 
 # PostgreSQL
 *.pid
