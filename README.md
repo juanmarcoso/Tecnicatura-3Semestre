@@ -1,6 +1,6 @@
 # Proyectos de la Tecnicatura en Programación - UTN San Rafael
 
-¡Hola! Soy Juan Orellana, estudiante de la Tecnicatura en Programación en la UTN de San Rafael. Este repositorio contiene todos mis proyectos realizados durante mis estudios del tercer semestre de la carrera. Aquí encontrarás una variedad de trabajos en diferentes lenguajes de programación y tecnologías.
+¡Hola! Soy Juan Orellana, estudiante de la Tecnicatura en Programación en la UTN de San Rafael. Este repositorio contiene todos mis proyectos realizados durante mis estudios del **tercer semestre** de la carrera. Aquí encontrarás una variedad de trabajos en diferentes lenguajes de programación y tecnologías.
 
 ## Estructura del Repositorio
 
