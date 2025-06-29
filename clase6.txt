@@ -1,0 +1,16 @@
+** Pregunta 3 Como desactivar un entorno virtual **
+
+En linux es: >> deactivate
+En windows es: >> deactivate
+
+** Pregunta 4 - Que es DOM **
+
+DOM (Document Object Model) es una representación estructurada y jerárquica de un documento HTML o XML en forma de árbol de nodos, que permite a los programas (como JavaScript) interactuar dinámicamente con el contenido, la estructura y el estilo de una página web.
+
+Diferencia entre DOM y HTML:
+
+    HTML: Código estático (lo que escribes en el archivo).
+
+    DOM: Representación viva y manipulable del HTML en memoria.
+
+El DOM es fundamental en desarrollo web frontend, especialmente en frameworks como React, Angular o Vue (que lo usan detrás de escenas). 
